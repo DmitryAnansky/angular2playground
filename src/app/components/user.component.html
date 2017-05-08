@@ -1,0 +1,16 @@
+<h1>User name: {{name}}</h1>
+<h3>Address: {{address.street}} , {{address.city}}</h3>
+<h3>Hobbies:</h3>
+<button (click)="toggleHobbies()">Toggle hobbies</button>
+<ul *ngIf="showHobbies">
+  <li *ngFor="let hobby of hobbies"> {{hobby}}</li>
+</ul><br/>
+<form>
+  <label>Name:</label>
+  <input name="name" type="text" [(ngModel)]="name"/>
+</form>
+<hr />
+<div *ngFor="let post of posts">
+  <h3>{{post.title}}</h3>
+  <p>{{post.body}}</p>
+</div>
